@@ -1,9 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import useStoreObjectsById from "./hooks/useStoreObjectsById";
-
-
-
-
 
 
 interface Sensor { id:	string;	name:	string;	connected:	boolean; unit:	string;	value:	string }
@@ -11,22 +7,20 @@ interface Sensor { id:	string;	name:	string;	connected:	boolean; unit:	string;	v
 
 const App = () => {
 
-  const [sensors, setSensors] = useStoreObjectsById<Sensor>();
+  const [sensors, addSensor] = useStoreObjectsById<Sensor>();
 
   useEffect(() => {
     const ws = new WebSocket("ws://localhost:5000");
 
     ws.onmessage = function (event) {
-      // we get an object
-      //console.log(event);
-      
-      //console.log("message");
-      //console.log(typeof event);
-      //const json = JSON.parse(event.data);
-      //console.log(typeof json);
+
+      const data = JSON.parse(event.data);
+      addSensor(data);
     };
-  }, []);
+  }, [addSensor]);
   
+
+  console.log(sensors);
 
   return (
     <p>Hi there App!</p>

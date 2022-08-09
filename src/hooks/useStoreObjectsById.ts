@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 interface ObjectWithId {
   id: string;
@@ -8,11 +8,11 @@ const useStoreObjectsById = <T extends ObjectWithId>(): [Record<string, T>, (obj
 
   const [storage, setStorage] = useState<Record<string, any>>({});
   
-  const addToStorage = (object: T) => {
+  const addToStorage = useCallback( (object: T) => {
     setStorage(prevStorage => (
       { ...prevStorage, [object.id]: object }
     ));
-  }
+  }, []);
 
   return [storage, addToStorage];
 }
