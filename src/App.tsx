@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import useStoreObjectsById from "./hooks/useStoreObjectsById";
-
-
-interface Sensor { id:	string;	name:	string;	connected:	boolean; unit:	string;	value:	string }
+import { Sensor } from "./models/sensor";
 
 
 const App = () => {

@@ -1,8 +1,6 @@
 import { useCallback, useState } from "react";
+import { ObjectWithId } from "../models/util";
 
-interface ObjectWithId {
-  id: string;
-}
 
 const useStoreObjectsById = <T extends ObjectWithId>(): [Record<string, T>, (object: T) => void] => {
 
