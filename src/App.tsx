@@ -8,9 +8,7 @@ const App = () => {
     toggleSensorConnection,
     isShowAll,
     toggleIsShowAll
-  } = useSensorsWithToggle();
-
-  console.log(sensors);
+  } = useSensorsWithToggle(false);
 
   const handleToggleFirstSensor = () => toggleSensorConnection("0");
 

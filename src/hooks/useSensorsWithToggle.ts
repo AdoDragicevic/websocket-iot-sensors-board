@@ -2,13 +2,23 @@ import useToggleBool from "./useToggle";
 import useSensors from "./useSensors";
 import { Sensor } from "../models/sensor";
 
+//enum SensorFilter { ALL, CONNECTED, DISCONNECTED };
+
+/*
+const useFilteredSensors = (filter: SensorFilter) => {
+  const [sensors, toggleSensorConnection] = useSensors();
+  let filtered: Sensor[];
+  switch(filter) {
+    
+  }
+};
+*/
 
 const useSensorsWithToggle = (isShowAllSensors = true) => {
 
   const [sensors, toggleSensorConnection] = useSensors();
 
   const [isShowAll, toggleIsShowAll] = useToggleBool(isShowAllSensors);
-
 
   let filtered = Object.keys(sensors).map(key => sensors[key]);
 
@@ -17,7 +27,7 @@ const useSensorsWithToggle = (isShowAllSensors = true) => {
   }
 
   return {
-    sensors,
+    sensors: filtered,
     isShowAll,
     toggleSensorConnection,
     toggleIsShowAll
