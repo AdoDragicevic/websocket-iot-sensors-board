@@ -2,7 +2,7 @@ import useToggleBool from "./useToggle";
 import useSensors from "./useSensors";
 import { Sensor } from "../models/sensor";
 
-//enum SensorFilter { ALL, CONNECTED, DISCONNECTED };
+
 
 /*
 const useFilteredSensors = (filter: SensorFilter) => {

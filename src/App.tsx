@@ -1,19 +1,26 @@
-import useSensorsWithToggle from "./hooks/useSensorsWithToggle";
+import useSensorsWithToggle from "./hooks/useSensorsWithToggle"
+import Header from "./components/layout/Header";
+import SensorList from "./components/sensor/SensorList";
 
 
 const App = () => {
 
   const {
-    sensors,
-    toggleSensorConnection,
-    isShowAll,
-    toggleIsShowAll
-  } = useSensorsWithToggle(false);
-
-  const handleToggleFirstSensor = () => toggleSensorConnection("0");
+    sensors, toggleSensorConnection,
+    isShowAll, toggleIsShowAll,
+  } = useSensorsWithToggle();
 
   return (
-    <button onClick={handleToggleFirstSensor}>Send</button>
+    <>
+      <Header>
+        <button onClick={toggleIsShowAll}>
+          {isShowAll ? "Show Connected" : "Show All"}
+        </button>
+      </Header>
+      <main className="main">
+        <SensorList sensors={sensors} onToggleSensorConnection={toggleSensorConnection} />
+      </main>
+    </>
   )
 };
 
