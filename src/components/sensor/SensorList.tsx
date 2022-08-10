@@ -11,9 +11,8 @@ const SensorList = ({ sensors, onToggleSensorConnection }: SensorListProps) => {
   return (
     <ul className="sensor-list">
       {sensors.map(s => (
-        <li className="sensor-list__item">
+        <li key={s.id} className="sensor-list__item">
           <Sensor
-            key={s.id} 
             sensor = {s}
             onToggleSensorConnection={onToggleSensorConnection}
           />
