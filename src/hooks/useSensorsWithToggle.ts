@@ -9,6 +9,7 @@ const useSensorsWithToggle = (isShowAllSensors = true) => {
 
   const [isShowAll, toggleIsShowAll] = useToggleBool(isShowAllSensors);
 
+
   let filtered = Object.keys(sensors).map(key => sensors[key]);
 
   if (!isShowAll) {
@@ -16,7 +17,7 @@ const useSensorsWithToggle = (isShowAllSensors = true) => {
   }
 
   return {
-    sensors: filtered,
+    sensors,
     isShowAll,
     toggleSensorConnection,
     toggleIsShowAll

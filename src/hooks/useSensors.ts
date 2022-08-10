@@ -9,8 +9,7 @@ const useSensors = (): [Record<string, Sensor>, (id: string) => void] => {
 
   const toggleSensor = useCallback( (sensorId: string) => {
     const { connected } = sensors[sensorId];
-    
-    sendMessage(JSON.stringify({ 
+    sendMessage(JSON.stringify({
       command: connected ? "disconnect" : "connect", 
       id: sensorId
     }));

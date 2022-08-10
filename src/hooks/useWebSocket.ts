@@ -11,7 +11,7 @@ const useWebSocket = <T extends ObjectWithId>(url: string): [Record<string, T>, 
   useEffect(() => {
     const ws = new WebSocket(url);
     ws.onmessage = e => addToStorage(JSON.parse(e.data));
-    setSendMessage(() => (msg: string) => ws.send(JSON.stringify(msg)) );
+    setSendMessage(() => (msg: string) => ws.send(msg) );
     return () => ws.close(1000, "Component unmounted");
   }, [url, addToStorage]);
 
