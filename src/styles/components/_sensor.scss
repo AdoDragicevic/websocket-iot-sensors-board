@@ -1,0 +1,57 @@
+.sensor {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  text-transform: uppercase;
+
+  &:hover &__btn {
+    opacity: 1;
+  }
+
+  &__name {
+    font-weight: 100;
+    font-size: 2rem;
+    opacity: .4;
+  }
+
+  &__values {
+    margin: 2rem 0;
+  }
+
+  &__value {
+    font-size: 4.5rem;
+    border-bottom: 1px solid rgba(black, .4);
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  &__unit {
+    margin: 1rem 6rem 6rem 6rem;
+    opacity: .6;
+    font-size: 1.5rem;
+  }
+  
+  &__btn {
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    width: 40%;
+    height: 4.5rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: var(--color-red);
+    cursor: pointer;
+    transition: all .4s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+    font-size: 1.5rem;
+    opacity: .7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

@@ -12,14 +12,17 @@ const App = () => {
 
   return (
     <>
+      
       <Header>
         <button onClick={toggleIsShowAll}>
           {isShowAll ? "Show Connected" : "Show All"}
         </button>
       </Header>
-      <main className="main">
+      
+      <main>
         <SensorList sensors={sensors} onToggleSensorConnection={toggleSensorConnection} />
       </main>
+
     </>
   )
 };

@@ -1,26 +1,19 @@
 import { SensorListProps } from "../../models/props";
-import SensorListItem from "./SensorListItem";
+import Sensor from "./Sensor";
 
 
-const SensorList = ({ sensors, onToggleSensorConnection }: SensorListProps) => {
-  
-  const items = sensors.map(s => {
-    const handleToggleSensorConnection = () => {
-      onToggleSensorConnection(s.id);
-    }
-    return (
-      <SensorListItem 
-        key={s.id} 
-        sensor = {s}
-        onToggleSensorConnection={handleToggleSensorConnection} 
-      />
-    )});
-  
-  return (
-    <ul className="sensor-list">
-      {items}
-    </ul>
-  )
-};
+const SensorList = ({ sensors, onToggleSensorConnection }: SensorListProps) => (
+  <ul className="sensor-list">
+    {sensors.map(s => (
+      <li className="sensor-list__item">
+        <Sensor
+          key={s.id} 
+          sensor = {s}
+          onToggleSensorConnection={onToggleSensorConnection}
+        />
+      </li>
+    ))}
+  </ul>
+);
 
 export default SensorList;

@@ -1,0 +1,25 @@
+.sensor-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  
+  padding: 4rem;
+  max-width: 140rem;
+  margin: 4rem auto;
+  
+
+  &__item {
+    flex: 0 30rem 1;
+    min-width: 40rem;
+    max-width: 90vw;
+    min-height: 20rem;
+    margin: 2rem 1rem;
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 5px;
+    transition: all .3s ease;
+    overflow: hidden;
+  }
+
+}

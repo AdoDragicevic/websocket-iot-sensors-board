@@ -11,7 +11,7 @@ export interface SensorListProps {
   onToggleSensorConnection: (id: string) => void;
 }
 
-export interface SensorListItemProps {
+export interface SensorProps {
   sensor: Sensor;
   onToggleSensorConnection: (id: string) => void;
 }

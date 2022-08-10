@@ -1,0 +1,16 @@
+.header {
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-primary--dark));
+  min-height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7vw;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+  &__title {
+    color: var(--color-dark--3);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 4.3rem;
+  }
+}
