@@ -8,10 +8,10 @@ export interface ChildrenProp {
 
 export interface SensorListProps {
   sensors: Sensor[];
-  onToggleSensorConnection: (id: string) => void;
+  onToggleSensorConnection: (s: Sensor) => void;
 }
 
 export interface SensorProps {
   sensor: Sensor;
-  onToggleSensorConnection: (id: string) => void;
+  onToggleSensorConnection: (s: Sensor) => void;
 }

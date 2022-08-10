@@ -3,7 +3,7 @@ import { SensorProps } from "../../models/props";
 
 const Sensor = ({ sensor, onToggleSensorConnection }: SensorProps) => {
 
-  const handleClick = () => onToggleSensorConnection(sensor.id);
+  const handleClick = () => onToggleSensorConnection(sensor);
 
   return (
     <article className="sensor">
