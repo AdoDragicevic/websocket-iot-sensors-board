@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import useStoreObjectsById from "./useStoreObjectsById";
+import { ObjectWithId } from "../models/util";
 
 
-const useWebSocket = (url: string) => {
+const useWebSocket = <T extends ObjectWithId>(url: string): [Record<string, T>, (str: string) => void] => {
   
-  const [storage, addToStorage] = useStoreObjectsById();
-  const [sendMessage, setSendMessage] = useState<(msg:string) => void>();
+  const [storage, addToStorage] = useStoreObjectsById<T>();
+  const [sendMessage, setSendMessage] = useState<(msg:string) => void>(() => {});
 
   useEffect(() => {
     const ws = new WebSocket(url);
