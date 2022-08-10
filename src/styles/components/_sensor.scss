@@ -3,32 +3,43 @@
   text-align: center;
   padding: 2rem;
   text-transform: uppercase;
+  min-height: 30rem;
+ 
 
   &:hover &__btn {
     opacity: 1;
   }
 
+  &:hover &__name {
+    color: #eee;
+  }
+
   &__name {
     font-weight: 100;
     font-size: 2rem;
-    opacity: .4;
+    color: rgba(#eee, .2);
+    transition: color .5s ease-in;
   }
 
   &__values {
-    margin: 2rem 0;
+    margin: 3rem 0 2rem 0; 
   }
 
   &__value {
-    font-size: 4.5rem;
-    border-bottom: 1px solid rgba(black, .4);
+    font-size: 6rem;
+    color: var(--color-primary--dark);
+    border-bottom: 1px solid rgba(#eee, .2);
     width: max-content;
     margin: 0 auto;
+    min-height: 5rem;
   }
 
   &__unit {
     margin: 1rem 6rem 6rem 6rem;
     opacity: .6;
     font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: rgb(241, 219, 219);
   }
   
   &__btn {
@@ -48,7 +59,7 @@
     letter-spacing: 1px;
     line-height: 1;
     font-size: 1.5rem;
-    opacity: .7;
+    opacity: .4;
 
     &:hover {
       opacity: 1;

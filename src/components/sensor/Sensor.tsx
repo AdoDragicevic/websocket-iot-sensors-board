@@ -12,7 +12,9 @@ const Sensor = ({ sensor, onToggleSensorConnection }: SensorProps) => {
         <p className="sensor__value">{sensor.value}</p>
         <p className="sensor__unit">{sensor.unit}</p>
       </div>
-      <button className="sensor__btn" onClick={handleClick}>Change</button>
+      <div className="sensor__options">
+        <button className="sensor__btn" onClick={handleClick}>Change</button>
+      </div>
     </article>
   )
 };

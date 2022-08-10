@@ -4,22 +4,20 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
-  
-  padding: 4rem;
-  max-width: 140rem;
-  margin: 4rem auto;
-  
-
+  margin: 10rem auto;
+  max-width: 130rem;
+  width: 90vw;
+ 
   &__item {
-    flex: 0 30rem 1;
-    min-width: 40rem;
-    max-width: 90vw;
+    flex: 1 1 35rem;
+    max-width: 100%;
     min-height: 20rem;
     margin: 2rem 1rem;
-    background-color: rgba(255, 255, 255, .7);
-    border-radius: 5px;
+    border-radius: 2px;
     transition: all .3s ease;
     overflow: hidden;
+    background-color: #26374b;
+    box-shadow: rgba(27, 31, 35, .3) 2px 4px 8px, rgba(255, 255, 255, 0.2) 0px 1px 5px;
   }
 
 }
