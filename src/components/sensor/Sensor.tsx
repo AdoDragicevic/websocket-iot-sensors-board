@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { SensorProps } from "../../models/props";
 
 const Sensor = ({ sensor, onToggleSensorConnection }: SensorProps) => {
@@ -16,4 +17,4 @@ const Sensor = ({ sensor, onToggleSensorConnection }: SensorProps) => {
   )
 };
 
-export default Sensor;
+export default memo(Sensor);
