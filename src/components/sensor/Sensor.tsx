@@ -5,6 +5,10 @@ const Sensor = ({ sensor, onToggleSensorConnection }: SensorProps) => {
 
   const handleClick = () => onToggleSensorConnection(sensor);
 
+  const btnCSS = `sensor__btn btn btn--${sensor.connected ? "success" : "danger"}`; 
+
+  const btnTxt = sensor.connected ? "Disconnect" : "Connect";
+
   return (
     <article className="sensor">
       <h2 className="sensor__name">{sensor.name}</h2>
@@ -13,7 +17,7 @@ const Sensor = ({ sensor, onToggleSensorConnection }: SensorProps) => {
         <p className="sensor__unit">{sensor.unit}</p>
       </div>
       <div className="sensor__options">
-        <button className="sensor__btn" onClick={handleClick}>Change</button>
+        <button className={btnCSS} onClick={handleClick}>{btnTxt}</button>
       </div>
     </article>
   )

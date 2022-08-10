@@ -1,0 +1,27 @@
+.btn {
+  border: none;
+  outline: none;
+  height: 4.5rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: var(--color-red);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-size: 1.5rem;
+  opacity: .4;
+  transition: all .4s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &--success {
+    background-color: var(--color-green);
+  }
+
+  &--danger {
+    background-color: var(--color-red);
+  }
+}

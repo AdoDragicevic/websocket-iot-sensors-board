@@ -3,22 +3,29 @@
   text-align: center;
   padding: 2rem;
   text-transform: uppercase;
-  min-height: 30rem;
- 
+  min-height: 30rem; 
 
   &:hover &__btn {
     opacity: 1;
   }
 
   &:hover &__name {
-    color: #eee;
+    opacity: 1;
+  }
+
+  &:hover &__unit {
+    opacity: 1;
+  }
+
+  &__name, &__unit {
+    color: var(--color-gray);
+    opacity: .2;
+    transition: opacity .5s ease-in;
   }
 
   &__name {
     font-weight: 100;
     font-size: 2rem;
-    color: rgba(#eee, .2);
-    transition: color .5s ease-in;
   }
 
   &__values {
@@ -36,33 +43,16 @@
 
   &__unit {
     margin: 1rem 6rem 6rem 6rem;
-    opacity: .6;
     font-size: 1.5rem;
     letter-spacing: 1px;
-    color: rgb(241, 219, 219);
+    opacity: .4;
   }
   
   &__btn {
-    border: none;
-    outline: none;
     position: absolute;
     right: 0;
     bottom: 15px;
     width: 40%;
-    height: 4.5rem;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: var(--color-red);
-    cursor: pointer;
-    transition: all .4s;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 1;
-    font-size: 1.5rem;
-    opacity: .4;
-
-    &:hover {
-      opacity: 1;
-    }
   }
+  
 }
