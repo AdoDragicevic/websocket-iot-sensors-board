@@ -4,7 +4,7 @@ import { ObjectWithId } from "../models/util";
 
 const useStoreObjectsById = <T extends ObjectWithId>(): [Record<string, T>, (object: T) => void] => {
 
-  const [storage, setStorage] = useState<Record<string, any>>({});
+  const [storage, setStorage] = useState<Record<string, T>>({});
   
   const addToStorage = useCallback( (object: T) => {
     setStorage(prevStorage => (
