@@ -3,7 +3,7 @@ import useSensors from "./useSensors";
 import { Sensor } from "../models/sensor";
 
 
-const useSensorsWithToggle = (isShowAllSensors: boolean) => {
+const useSensorsWithToggle = (isShowAllSensors = true) => {
 
   const [sensors, toggleSensorConnection] = useSensors();
 
