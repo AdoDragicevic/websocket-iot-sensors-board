@@ -1,24 +1,13 @@
-import useToggleBool from "./useToggle";
+import useToggle from "./useToggle";
 import useSensors from "./useSensors";
 import { Sensor } from "../models/sensor";
 
-
-
-/*
-const useFilteredSensors = (filter: SensorFilter) => {
-  const [sensors, toggleSensorConnection] = useSensors();
-  let filtered: Sensor[];
-  switch(filter) {
-    
-  }
-};
-*/
 
 const useSensorsWithToggle = (isShowAllSensors = true) => {
 
   const [sensors, toggleSensorConnection] = useSensors();
 
-  const [isShowAll, toggleIsShowAll] = useToggleBool(isShowAllSensors);
+  const [isShowAll, toggleIsShowAll] = useToggle(isShowAllSensors);
 
   let filtered = Object.keys(sensors).map(key => sensors[key]);
 

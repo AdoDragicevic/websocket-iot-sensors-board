@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { ToggleSliderProps } from "../../models/props";
 
 
@@ -16,4 +17,4 @@ const ToggleSlider = ({ onToggle, optionOne, optionTwo }: ToggleSliderProps) => 
   </nav>
 );
 
-export default ToggleSlider;
+export default memo(ToggleSlider);
