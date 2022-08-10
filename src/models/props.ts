@@ -15,3 +15,9 @@ export interface SensorProps {
   sensor: Sensor;
   onToggleSensorConnection: (s: Sensor) => void;
 }
+
+export interface ToggleSliderProps {
+  onToggle: () => void;
+  optionOne: string;
+  optionTwo: string;
+}

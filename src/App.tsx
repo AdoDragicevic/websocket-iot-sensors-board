@@ -1,22 +1,21 @@
 import useSensorsWithToggle from "./hooks/useSensorsWithToggle"
 import Header from "./components/layout/Header";
 import SensorList from "./components/sensor/SensorList";
-
+import ToggleSlider from "./components/UI/ToggleSlider";
 
 const App = () => {
 
-  const {
-    sensors, toggleSensorConnection,
-    isShowAll, toggleIsShowAll,
+  const { 
+    sensors, 
+    toggleSensorConnection, 
+    toggleIsShowAll,
   } = useSensorsWithToggle();
 
   return (
     <>
       
       <Header>
-        <button onClick={toggleIsShowAll}>
-          {isShowAll ? "Show Connected" : "Show All"}
-        </button>
+        <ToggleSlider onToggle={toggleIsShowAll} optionOne="All" optionTwo="Connected" />
       </Header>
       
       <main>
