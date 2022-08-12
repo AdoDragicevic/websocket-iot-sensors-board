@@ -5,7 +5,7 @@ const Sensor = ({ sensor, onToggleSensorConnection }: SensorProps) => {
 
   const handleClick = () => onToggleSensorConnection(sensor);
 
-  const btnCSS = `sensor__btn btn btn--${sensor.connected ? "success" : "danger"}`; 
+  const btnCSS = `sensor__btn btn btn--${sensor.connected ? "danger" : "success" }`; 
 
   const btnTxt = sensor.connected ? "Disconnect" : "Connect";
 
